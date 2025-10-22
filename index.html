@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="¿Qué sopem? es una web accesible de recetas caseras con imagenes, vídeos y posibilidad de compartir recetas con dictado por voz.">
+  <title>¿Qué sopem? Recetas fáciles, caseras y accesibles</title> <!-- Title descriptivo para saber como se llama la web y que contiene -->
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Google Fonts --> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  
+  <!-- Google Material Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- CABECERA -->
+  <header id="cabecera">
+    <img src="images/fondoCabecera.png" alt=""> <!-- Imágen decorativa sin descripcion en alt -->
+    <h1>¿Què sopem?</h1>
+    <nav aria-label="Menú principal"><!-- Barra de navegación accesible con aria-label y lista -->
+      <ul id="menu-principal">
+        <li><a href="index.html" class="logo" aria-label="Inicio ¿Qué sopem?"><img src="images/logoSINfondo.png" alt="Logo ¿Qué sopem?" /></a></li>
+        <li><a href="Ensaladas">Ensaladas</a> </li>  
+        <li><a href="Arroces">Arroces</a></li>
+        <li><a href="Pastas">Pastas</a></li>
+        <li><a href="Carnes">Carnes</a></li>
+        <li><a href="Pescados">Pescados</a></li>
+        <li><a href="Postres">Postres</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SECCIÓN SOBRE EL TEMA -->
+    <section id="sobre-mi">
+      <h2>Mis recetas del día a día</h2>
+      <p>
+        Cocinar siempre ha sido mi forma de desconectar y disfrutar del momento. 
+        En <strong>¿Qué sopem?</strong> comparto mis recetas del día a día, aquellas que preparo en casa con cariño y que cualquiera puede hacer. 
+        Porque comer bien no tiene por qué ser complicado, solo hace falta ganas y tiempo para crear momentos que se disfrutan a fuego lento.
+      </p>
+    </section>
+
+    <!-- SECCIÓN DE GALERÍA DE IMÁGENES -->
+    <section id="galeria">
+      <h2>Galería de recetas</h2>
+      <h3>Imágenes de recetas y platos destacados</h3> <!-- Carrusel de imágenes con descripcion de la receta en el alt -->
+      <img src="images/arros_al_forn.png" alt="Arroz al horno casero con costilla, morcilla y tomate">
+      <img src="images/ensalada_arroz.png" alt="Ensalada fresca de arroz con verduras y atún">
+      <img src="images/fideua.png" alt="Fideua del senyoret">
+      <img src="images/suquet.png" alt="Suquet de rape y gambas">
+      <img src="images/pollo_guisado.png" alt="Pollo guisado con verduras">
+      <img src="images/rovellones.png" alt="Rovellones salteados con ajo,perejil y pimentón">
+      <img src="images/arroz_alcachofa.png" alt="Arroz con alcachofas y pulpo">
+      <img src="images/cordero_horno.png" alt="Cordero al horno con patatas">
+      <img src="images/mona_pascua.png" alt="Mona de Pascua casera">
+      <img src="images/arroz_carabinero.png" alt="Arroz con carabineros y sepia">
+      <img src="images/ensalada.png" alt="Ensalada mixta de tomate, cebolla y atún">
+      <img src="images/ensalada_patata.png" alt="Ensalada de patata, zanahoria, espinacas y huevo duro">   
+    </section>
+
+    <!-- SECCIÓN DE VIDEO ACCESIBLE -->
+    <section id="video">
+      <h2>Vídeo de presentación: cómo nació ¿Qué sopem?</h2>
+      <video controls width="600" aria-label="Vídeo de presentación con voz e imágenes de recetas">
+        <source src="media/mi_video.mp4" type="video/mp4">
+        <track src="media/subtitulos_video.vtt" kind="subtitles" srclang="es" label="Español" default>
+      </video>
+    </section>
+
+    <!-- SECCIÓN OPCIONAL -->
+    <section id="extra">
+      <h2 id="titulo-extra">Comparte tu receta</h2>
+      <p>¿Tienes una receta favorita de tu día a día? Cuéntamela aquí:</p>
+
+      <p id="consejo-voz" role="note">
+        <span class="material-symbols-outlined" id="iconoConsejo">emoji_objects</span>Consejo: para un mejor reconocimiento de voz, usa auriculares o cascos con micrófono.
+      </p>
+
+      <form aria-label="¿Quieres compartir tu receta?">
+
+        <div class="grupoInput">
+          <input id="nombre" type="text" required="" aria-required="true" autocomplete="off">
+          <label for="nombre">Nombre</label>
+        </div>
+
+        <label for="receta" class="sr-only">Escribe aquí tu receta:</label>
+        <textarea id="receta" name="receta" placeholder="Escribe aquí tu receta" rows="10" aria-required="true"></textarea>
+
+
+        <button type="button" id="botonDictar" aria-pressed="false" aria-label="Iniciar dictado de receta">Iniciar dictado por voz</button>
+
+        <p id="estado-voz" role="status" aria-live="polite"><br></p>
+
+        <button type="submit" aria-label="Enviar receta" id="botonEnviar">
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  fill="currentColor"
+                  d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <span>Enviar</span>
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contacto" aria-label="Enlaces de las redes sociales">
+    <p>© 2025 - Javier García</p>
+    <ul>
+      <li>
+        <a href="https://twitter.com" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <a href="https://facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <a href="https://instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+  </footer>
+
+  <!-- Script para el dictado por voz -->
+  <script src="dictadoPorVoz.js"></script>
+
+</body>
+</html>

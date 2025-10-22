@@ -1,0 +1,424 @@
+/* ESTILOS GENERALES */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h1, h2, h3{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3b2a1e;
+}
+
+h2{
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+h3{
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+/* ESTILOS CABECERA Y MENÚ PRINCIPAL */
+#cabecera{
+    width: 100%;
+    height: auto;
+    margin-top: 35px;
+    position: relative;
+    z-index: 10;
+}
+
+#cabecera img{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+#cabecera h1{
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 4.5em;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+#menu-principal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    z-index: 999;
+    width:100%;
+    top: 0;
+    background: linear-gradient(180deg, #3b2a1e 0%, #2a1f19 100%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+    flex-grow: 1;
+}
+
+#menu-principal li .logo img {
+    height: 25px;      
+    width: auto;
+    vertical-align: middle;
+    margin-left: -40px;  
+    rotate: -5deg;
+}
+
+
+#menu-principal li a{
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: 600; 
+    display: block;
+    padding: 5px 20px;
+    font-size: 20px;
+}
+
+#menu-principal li .logo:hover {
+    background: none;
+    outline: none;
+}
+
+#menu-principal li a:hover,
+#menu-principal li a:focus {
+    background-color: #F2A64F;
+    color: black;
+    border-radius: 6px;
+    text-shadow: none;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* ESTILOS SECCIÓN SOBRE MÍ */
+#sobre-mi{
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ESTILOS DE LA GALERIA DE RECETAS */
+#galeria {
+    max-width: 1200px;           
+    margin: 60px auto;           
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 15px;  
+}
+
+#galeria h2, 
+#galeria h3 {
+    text-align: center;
+}
+
+#galeria img {
+    width: 100%;
+    height: 220px;               
+    object-fit: cover;           
+    border-radius: 20px;         
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#galeria img:hover,
+#galeria img:focus {
+    transform: scale(1.05);                         
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    outline: 3px solid #f4c430;                    
+    outline-offset: 3px;
+}
+
+/* ESTILOS DEL VIDEO */
+
+#video {
+  text-align: center;
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 900px;
+}
+
+
+#video h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2em;
+  color: #3b2a1e;
+  margin-bottom: 20px;
+}
+
+
+#video video {
+  width: 100%;                 
+  max-width: 700px;            
+  border-radius: 12px;         
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+  outline: none;
+}
+
+#video video:focus {
+  outline: 3px solid #f4c430;  
+  outline-offset: 3px;
+}
+
+/* ESTILOS DE LA SECCIÓN COMPARTE RECETA */
+
+/* FORMULARIO */
+#extra{
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+#extra h2{
+    margin:0;
+}
+
+#extra form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* INPUT DEL NOMBRE (De la librería universe.io)*/
+.grupoInput {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 0 1em 0;
+  width: 33%;
+  position: relative;
+}
+
+.grupoInput input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.grupoInput label {
+  font-size: 100%;
+  position: absolute;
+  top: 50%;                   
+  left: 15px;                 
+  transform: translateY(-50%); 
+  pointer-events: none;
+  color: #3b2a1e;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.grupoInput :is(input:focus, input:valid)~label {
+  transform: translateY(-120%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color:  #f9f9f9;
+  color: #3b2a1e;
+}
+
+.grupoInput :is(input:focus, input:valid) {
+  border-color: #3b2a1e;
+}
+
+/* TEXT AREA PARA ESCRIBIR LA RECETA */
+#receta {
+  width: 80%;
+  height: 200px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid lightgrey;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+
+#receta:focus {
+  border: 1.5px solid #3b2a1e;
+}
+
+/*BOTÓN ENVIAR (De la librería universe.io)*/
+#botonEnviar {
+  width: 150px;
+  font-size: 20px;
+  background: royalblue;
+  color: #f9f9f9;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#botonEnviar span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+#botonEnviar svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+#botonEnviar:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+#botonEnviar:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+#botonEnviar:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+/*BOTÓN DICTADO (De la librería universe.io)*/
+#botonDictar {
+  padding:5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #3b2a1e;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #3b2a1e;
+  width: 250px;
+  font-size: 20px;
+}
+
+#botonDictar:hover {
+  color: white;
+  transform: scale(1.02);
+  outline: 2px solid #3b2a1e;
+  box-shadow: 4px 5px 17px -4px #3b2a1e;
+}
+
+#botonDictar::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #3b2a1e;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+#botonDictar:hover::before {
+  width: 250%;
+}
+
+
+/* ESTILOS DEL FOOTER */
+#contacto {
+    height: 10px;
+    width: 100%;
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background: linear-gradient(180deg, #3b2a1e 0%, #2a1f19 100%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+}
+
+#contacto p {
+    font-size: 16px;
+}
+
+#contacto ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0 0 0 15px;
+}
+
+#contacto ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#contacto ul li a:hover,
+#contacto ul li a:focus {
+    color: #f9fb88;
+}
+
+
+/*ESTILO SIMBOLO GRABAR*/
+#iconoMic{
+  vertical-align: middle;
+  font-size: 24px;
+  color: green; 
+  animation: latido 1.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+
+/* Animación del bombeo */
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/*ESTILO SIMBOLO CONSEJO*/
+#iconoConsejo{
+  vertical-align: middle;
+  font-size: 24px;
+  margin-right: 5px;
+  color: #3b2a1e;   
+}
+
