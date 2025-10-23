@@ -48,7 +48,7 @@ h3{
     top: 20px;
     width: 100%;
     text-align: center;
-    font-size: clamp(2.5em, 6vw, 4.5em); /* Escala el tamaño según el ancho */
+    font-size: clamp(2em, 6vw, 4.5em); /* Escala el tamaño según el ancho */
     color: white;
     text-shadow: 2px 2px 4px #000000;
     line-height: 1.1;
@@ -365,7 +365,7 @@ button:hover span {
     padding: 15px 0;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 60px;
     background: linear-gradient(180deg, #3b2a1e 0%, #2a1f19 100%);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
 }
