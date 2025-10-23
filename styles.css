@@ -365,7 +365,7 @@ button:hover span {
     padding: 15px 0;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
     background: linear-gradient(180deg, #3b2a1e 0%, #2a1f19 100%);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
 }
