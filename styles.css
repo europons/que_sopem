@@ -32,27 +32,9 @@ h3{
     width: 100%;
     height: auto;
     margin-top: 35px;
-    position: relative;
     z-index: 10;
-}
-
-#cabecera img{
-    position: relative;
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-#cabecera h1{
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    text-align: center;
-    font-size: clamp(2em, 6vw, 4.5em); /* Escala el tamaño según el ancho */
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    line-height: 1.1;
-    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -63,6 +45,7 @@ h3{
     margin: 0;
     padding: 0;
     position:fixed;
+    flex-wrap: wrap;
     z-index: 999;
     width:100%;
     top: 0;
@@ -75,7 +58,6 @@ h3{
     height: 25px;      
     width: auto;
     vertical-align: middle;
-    margin-left: -40px;  
     rotate: -5deg;
 }
 
@@ -103,6 +85,30 @@ h3{
     text-shadow: none;
     outline: 2px solid #fff;
     outline-offset: 2px;
+}
+#portada{
+    position: relative;
+    display: inline-block;
+}
+
+#portada img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
+#portada h1{
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    width: 100%;
+    font-size: clamp(3em, 6vw, 6em); /* Escala el tamaño según el ancho */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    line-height: 1.1;
+    padding: 0 10px;
 }
 
 /* ESTILOS SECCIÓN SOBRE MÍ */
